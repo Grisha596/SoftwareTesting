@@ -25,10 +25,4 @@ jobs:
     - name: run playwright tests
       run:  npx playwright install
             npm run test:e2e **/tests
-
-    - name: Run Playwright tests with custom URL
-      env:
-      CUSTOM_SIGNUP_URL: 'https://grisha596.github.io/SoftwareTesting/htmlFIle/createUser.html'
-      CUSTOM_SIGNUP_URL: 'https://grisha596.github.io/SoftwareTesting/htmlFIle/powerTrade_1.html '
-      run: npx playwright test:e2e **/tests
       

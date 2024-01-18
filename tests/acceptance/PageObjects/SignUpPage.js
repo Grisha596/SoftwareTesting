@@ -18,9 +18,7 @@ class SignUpPage {
   }
 
   async gotoSignUpPage() {
-    const customSignUpUrl = process.env.CUSTOM_SIGNUP_URL || null;
-    await SignUpPage.gotoSignUpPage(customSignUpUrl);
-    // await page.goto(this.signUpUrl);
+    await page.goto(this.signUpUrl);
   }
 
   async createsAccount(dataTable) {

@@ -20,9 +20,10 @@ jobs:
         node-version: 16.x
 
     - name: install dependencies
-      run: npm install
+      run: |
+        npm install
 
-    - name: run playwright tests
-      run:  npx playwright install
-            npm run test:e2e tests/acceptance/features/*.feature
-      
+    - name: run web-ui tests
+      run: |
+        npx playwright install
+        npm run test:e2e **/tests

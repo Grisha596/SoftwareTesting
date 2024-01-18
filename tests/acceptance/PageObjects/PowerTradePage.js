@@ -18,7 +18,7 @@ class PowerTradePage {
 
 
     async openForm() {
-        await page.goto(this.globalpowerTradeUrl);
+        await page.goto(this.globalPowerTradeUrl);
     }
 
     async fillingForm(dataTable) {

@@ -4,6 +4,7 @@ const { expect } = require("@playwright/test");
 
 let initialUrl;
 let validationMessage;
+
 const SignUpPage = require("../PageObjects/SignUpPage");
 const signUpPage = new SignUpPage();
 

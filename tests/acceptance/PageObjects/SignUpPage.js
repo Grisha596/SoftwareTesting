@@ -2,8 +2,7 @@ const util = require("util");
 
 class SignUpPage {
   constructor() {
-    this.baseUrl = `${process.cwd()}` + `/htmlFIle`;
-    this.signUpUrl = this.baseUrl + "/createUser.html";
+    this.signUpUrl = ``
 
     this.emailBoxSelector = `//input[@name="email"]`;
     this.passwordBoxSelector = `//input[@name="psw"]`;

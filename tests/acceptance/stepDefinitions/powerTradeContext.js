@@ -4,6 +4,9 @@ const { expect } = require("playwright/test");
 let initialUrl;
 let validationMessage;
 
+const PowerTradePage = require("../PageObjects/PowerTradePage");
+const powerTradePage = new PowerTradePage();
+
 Given("the user has opened the form", async function () {
   await powerTradePage.openForm();
   const locator = await page.locator(powerTradePage.companyNameSelector);

@@ -2,7 +2,7 @@ const util = require("util");
 
 class SignUpPage {
   constructor() {
-    this.signUpUrl = ``
+    this.signUpUrl = `https://grisha596.github.io/SoftwareTesting/htmlFIle/createUser.html`
 
     this.emailBoxSelector = `//input[@name="email"]`;
     this.passwordBoxSelector = `//input[@name="psw"]`;
@@ -13,7 +13,7 @@ class SignUpPage {
     this.signUpButtonSelector = `//button[@type="submit"]`;
     this.closeIconSelector = `//span[@title="Close Modal"]`;
     this.cancelButtonSelector = `//button[@class="cancelbtn"]`;
-    this.fieldSelector;
+    // this.fieldSelector;
   }
 
   async gotoSignUpPage() {

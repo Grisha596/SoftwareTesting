@@ -23,6 +23,6 @@ jobs:
       run: npm install
 
     - name: run playwright tests
-      run:  npx playwright install@latest --force
+      run:  npm init playwright@latest --force
             npm run test:e2e **/tests
       

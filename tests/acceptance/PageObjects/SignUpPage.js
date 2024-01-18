@@ -5,7 +5,7 @@ class SignUpPage {
   constructor() {
     this.baseUrl = path.dirname(__filename) + "/../../../htmlFIle";
     this.signUpUrl = this.baseUrl + "/createUser.html";
-
+    this.globalSignUpUrl = `https://grisha596.github.io/SoftwareTesting/htmlFIle/createUser.html`;
     this.emailBoxSelector = `//input[@name="email"]`;
     this.passwordBoxSelector = `//input[@name="psw"]`;
     this.repasswordBoxSelector = `//input[@name="psw-repeat"]`;
@@ -18,7 +18,7 @@ class SignUpPage {
   }
 
   async gotoSignUpPage() {
-    await page.goto(this.signUpUrl);
+    await page.goto(this.globalSignUpUrl);
   }
 
   async createsAccount(dataTable) {

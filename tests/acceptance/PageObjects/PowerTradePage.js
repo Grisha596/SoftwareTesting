@@ -1,10 +1,11 @@
-const path = require('path');
-const baseUrl = path.dirname(__filename) + '/../../../htmlFile';
+// const path = require('path');
+// const baseUrl = path.dirname(__filename) + '/../../../htmlFile';
 
 class PowerTradePage {
     constructor() {
         // this.UOMConversionSelector = `//input[@value="Kw"]`
-        this.powerTradeUrl = baseUrl + '/powerTrade_1.html';
+        // this.powerTradeUrl = baseUrl + '/powerTrade_1.html';
+        this.globalPowerTradeUrl = `https://grisha596.github.io/SoftwareTesting/htmlFIle/powerTrade_1.html`
         this.companyNameSelector = `//input[@value="KBS Energy"]`;
         this.addressSelector = `//input[@name="addr"]`;
         this.traderSelector = `//select[@name="trader"]`;
@@ -17,7 +18,7 @@ class PowerTradePage {
 
 
     async openForm() {
-        await page.goto(this.powerTradeUrl);
+        await page.goto(this.globalPowerTradeUrl);
     }
 
     async fillingForm(dataTable) {

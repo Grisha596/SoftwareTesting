@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout repo code
-      uses: actions/checkout@v23
+      uses: actions/checkout@v3
 
     - name: set up node
       uses: actions/setup-node@v3
@@ -27,10 +27,3 @@ jobs:
     - name: run playwright tests
       run:  npx playwright install
             npm run test:e2e **/tests
-
-    - name: Publish Test Results
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: test-results

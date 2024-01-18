@@ -1,9 +1,9 @@
 const { expect } = require("playwright/test");
+
 class PowerTradePage {
     constructor() {
         // this.UOMConversionSelector = `//input[@value="Kw"]`
-        this.baseUrl = `${process.cwd()}` + `/htmlFIle`;
-        this.powerTradeUrl = this.baseUrl + '/powerTrade_1.html';
+        this.powerTradeUrl = `https://grisha596.github.io/SoftwareTesting/htmlFIle/powerTrade_1.html`
         this.companyNameSelector = `//input[@value="KBS Energy"]`;
         this.addressSelector = `//input[@name="addr"]`;
         this.traderSelector = `//select[@name="trader"]`;
@@ -34,6 +34,7 @@ class PowerTradePage {
         await page.locator('#freq').selectOption('Hourly');
         await page.click(this.submitButtonSelector);
     }
+
     async verifyAllFieldsEmpty() {
         // Get the values of each field using page.$eval
         const address = await page.$eval(this.addressSelector, el => el.value);
@@ -52,5 +53,6 @@ class PowerTradePage {
         expect(volume).toBe('');
         expect(frequency).toBe('');
     }
+
 }
 module.exports = PowerTradePage;
